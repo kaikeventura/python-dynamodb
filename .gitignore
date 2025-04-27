@@ -15,12 +15,6 @@ ENV/
 # LocalStack
 .localstack/
 
-# Docker
-docker-compose.yml
-docker-compose.override.yml
-.docker/
-*.docker/
-
 # IDEs
 .vscode/
 .idea/
@@ -50,6 +44,7 @@ build/
 # AWS Configuration files
 .aws/
 
+# Secrets
 # Secrets
 *.pem
 *.key
