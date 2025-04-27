@@ -107,6 +107,24 @@ def get_by_id(uid: uuid):
     return item[0]
 
 
+def get_parametrized_price_history(uid: uuid):
+    response = table.query(
+        KeyConditionExpression=Key('id').eq(str(uid))
+    )
+
+    item = response.get('Items', None)[0]
+
+    price_histories = [
+        PriceHistory(
+            price=price['price'],
+            date=price['date']
+        )
+        for price in item['price_history']
+    ]
+
+    return price_histories
+
+
 def delete_by_id(uid: str, created_at: str):
     response = table.delete_item(
         Key={
@@ -141,6 +159,8 @@ if __name__ == '__main__':
     print(products)
 
     product_id = products[0]['id']
+    price_histories = get_parametrized_price_history(uid=product_id)
+    print(price_histories)
 
     product = get_by_id(product_id)
     print(product)
