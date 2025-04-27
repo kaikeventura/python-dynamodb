@@ -1,0 +1,63 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual Environment
+venv/
+env/
+ENV/
+*.env
+
+# LocalStack
+.localstack/
+
+# Docker
+docker-compose.yml
+docker-compose.override.yml
+.docker/
+*.docker/
+
+# IDEs
+.vscode/
+.idea/
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Test coverage reports
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+
+# Distribution / Packaging
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# AWS Configuration files
+.aws/
+
+# Secrets
+*.pem
+*.key
+*.crt
+*.env
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
